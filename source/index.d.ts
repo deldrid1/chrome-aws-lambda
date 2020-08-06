@@ -207,18 +207,18 @@ declare global {
   }
 }
 
-declare module 'puppeteer' {
-  export interface Browser extends BrowserContext {
-    /**
-     * Returns a new page overloaded with browser-context methods.
-     *
-     * @param hooks - Optional hooks to apply on the new page.
-     */
-    newPage(...hooks: ((page: Page) => Page)[]): Promise<Page>;
-  }
+// declare module 'puppeteer' {
+//   export interface Browser extends BrowserContext {
+//     /**
+//      * Returns a new page overloaded with browser-context methods.
+//      *
+//      * @param hooks - Optional hooks to apply on the new page.
+//      */
+//     newPage(...hooks: ((page: Page) => Page)[]): Promise<Page>;
+//   }
 
-  export interface Page extends Chromium.Page {}
-  export interface Frame extends Chromium.Frame {}
-}
+//   export interface Page extends Chromium.Page {}
+//   export interface Frame extends Chromium.Frame {}
+// }
 
 export = Chromium;
